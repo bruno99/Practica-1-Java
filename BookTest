@@ -1,0 +1,17 @@
+package practica1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class BookTest {
+Book book8 = new Book("Don quijote",
+            "Cervantes",
+            "X",
+            "santillana");
+@Test
+void test_editorial() {
+assertEquals("santillana",book8.getEditorial());
+}
+
+}
