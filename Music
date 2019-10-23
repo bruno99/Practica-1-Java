@@ -26,6 +26,15 @@ public String getLenght() {
 public String getGenre() {
 	 return this.genre;
 	 }
+	 public String getMoData() {
+return "Name: " + this.name + "\t" +
+"Author: " + this.author + "\t" +
+"Year: " + this.year + "\t" +
+"Genre: " + this.genre + "\t" +
+"Lenght: " + this.lenght + "\t" +
+"Number of albums available: " + this.amount;
+
+}
 
 }
 	
