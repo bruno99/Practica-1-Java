@@ -26,5 +26,14 @@ public String getLenght() {
 public String getCategory() {
 	 return this.category;
 	 }
+	public String getMoData() {
+return "Name: " + this.name + "\t" +
+"Author: " + this.author + "\t" +
+"Year: " + this.year + "\t" +
+"Category: " + this.category + "\t" +
+"Lenght: " + this.lenght + "\t" +
+"Number of movies available: " + this.amount;
+
+}
 }
 	
