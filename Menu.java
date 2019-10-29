@@ -1,11 +1,25 @@
 package practica1;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.ResourceBundle;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
 
-
+private Locale locale;
+	private Messages messages;
+	
+	public Menu(Locale locale) {
+		this.locale = locale;
+		messages= new Messages(locale);
+	}
 	public static void main(String[] args) {
 		//LISTA DE LIBROS
 		ArrayList<Book> list = new ArrayList<Book>();
@@ -53,27 +67,29 @@ public class Menu {
 		boolean close = false;
 		int option;      
 
+		System.out.ptinyln("1-Español \n 2-English \n 3-Francais"); 
+				  
 		while(!close){
 
-			System.out.println("1. New book"); //depende de la cantidad, añadir nuevo o añadir un +1 a la cantidad
-			System.out.println("2. Check 1 book"); //funcion search que busque, tambien se usa en el 1 y el 4
-			System.out.println("3. Check book list");
-			System.out.println("4. Take book out (if available)"); //se fija en la cantidad y lo quita o le resta 1 a la cantidad
-			System.out.println("5. Close");
+			System.out.println("1. Locale.getMessages ("option1", locale)"); //depende de la cantidad, añadir nuevo o añadir un +1 a la cantidad
+			System.out.println("2. Locale.getMessages ("option2", locale)"); //funcion search que busque, tambien se usa en el 1 y el 4
+			System.out.println("3. ("option3", locale)");
+			System.out.println("4. ("option4", locale)"); //se fija en la cantidad y lo quita o le resta 1 a la cantidad
+			System.out.println("5. ("option5", locale)");
 
-			System.out.println("Write your option");
+			System.out.println("("option", locale)");
 			option = sn.nextInt();
 
 			switch(option){
 			case 1:
 				Scanner keyboard = new Scanner(System.in);
-				System.out.println("Is your book already in our book list? (Yes=0; No=1)");
+				System.out.println("("productoLista", locale)");
 				for (int i=0; i < list.size(); i++)
 					System.out.println(list.get(i).getData());
 				int answer;
 				answer = keyboard.nextInt();
 				if (answer == 0) {
-					System.out.println("Which one? (Write the order number) ");
+					System.out.println("("productoListaSi", locale) ");
 					int in;                     
 					in = keyboard.nextInt();
 					int x;
@@ -83,14 +99,14 @@ public class Menu {
 				else {
 					String n, a, y,e;
 
-					System.out.println("New book");
-					System.out.println("Name: \n");  
+					System.out.println("("nuevoProducto", locale)");
+					System.out.println("("nombre", locale)\n");  
 					n = keyboard.nextLine();
-					System.out.println("Author: \n");  
+					System.out.println("("autor", locale)\n");  
 					a = keyboard.nextLine();
-					System.out.println("Year: \n");  
+					System.out.println("("ano", locale) \n");  
 					y = keyboard.nextLine();
-					System.out.println("Editorial: \n");  
+					System.out.println("("editorial", locale) \n");  
 					e = keyboard.nextLine();
 					Book bookk = new Book(n,a,y,e);
 					list.add(bookk); 
@@ -98,10 +114,10 @@ public class Menu {
 				}
 				break;
 			case 2:
-				System.out.println("Check 1 book");            
+				System.out.println("("buscarProducto", locale)");            
 				Scanner keyboard2 = new Scanner(System.in);                          
 				int in;
-				System.out.println("What book do you want to check?");  
+				System.out.println("("buscando", locale)");  
 				for (int i=0; i < list.size(); i++)
 					System.out.println(list.get(i).getName());
 				in = keyboard2.nextInt();
@@ -109,15 +125,15 @@ public class Menu {
 
 				break;
 			case 3:
-				System.out.println("Check book list");
+				System.out.println("("listaProductos", locale)");
 
 				for (int i=0; i < list.size(); i++)
 					System.out.println(list.get(i).getData());
 
 				break;
 			case 4:              	
-				System.out.println("Take book out (if available)");
-				System.out.println("What book do you want?(write number of list)\n");
+				System.out.println("("sacarProducto", locale)");
+				System.out.println("("sacando", locale)\n");
 				for (int i=0; i < list.size(); i++)
 					System.out.println(list.get(i).getData());
 				Scanner keyboard3 = new Scanner(System.in);
@@ -125,10 +141,10 @@ public class Menu {
 				int x;
 				x= list.get(in-1).getAmount();
 				if (x<1)
-					System.out.println("Not available");
+					System.out.println("("disponibilidad", locale)");
 				else {
 					list.get(in-1).setAmount(x-1);
-					System.out.println("Thanks for taking ");
+					System.out.println("("compra", locale)");
 					System.out.println(list.get(in-1).getName()); 
 				}
 				break;
@@ -136,7 +152,7 @@ public class Menu {
 				close=true;
 				break;
 			default:
-				System.out.println("only numbers between 1 and 5");
+				System.out.println("("fallo", locale)");
 			}
 
 		}
