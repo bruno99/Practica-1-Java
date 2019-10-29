@@ -62,13 +62,31 @@ private Locale locale;
 		User user3 = new User("Rocio ", "Ro99", "Rnebrija", "609897654", false);
 		list4.add(user3);
 		
-		//AQUI ABAJO TENGO QUE EDITAR POR LAS HERENCIAS Y METER EL USER
+		
+		    
+                //Aqui metes tu usuario (existe o no)
+		System.out.ptinyln("1-Español \n 2-English \n 3-Francais"); 
+		string u, p;
+		Scanner user = new Scanner(System.in);
+		System.out.ptinyln("("user", locale)");
+		u =user.nextInt();
+		System.out.ptinyln("("password", locale)");
+		p=user.nextInt();
+		for(int i=1; i>list4.size: i++){
+			if u == list4.getName(user[i]){
+			System.out.ptinyln("("utrue", locale)");
+			int cuenta = 0;
+			}
+		}
+		if (cuenta !=0){
+		System.out.ptinyln("("ufalse", locale)");
+			System.exit(0);
+		}
+		
+		
 		Scanner sn = new Scanner(System.in);
 		boolean close = false;
-		int option;      
-
-		System.out.ptinyln("1-Español \n 2-English \n 3-Francais"); 
-				  
+		int option;  	  
 		while(!close){
 
 			System.out.println("1. Locale.getMessages ("option1", locale)"); //depende de la cantidad, añadir nuevo o añadir un +1 a la cantidad
@@ -112,6 +130,9 @@ private Locale locale;
 					list.add(bookk); 
 
 				}
+			       System.out.println("("precioPositivo", locale)"); 
+					cuenta = cuenta-10;
+					
 				break;
 			case 2:
 				System.out.println("("buscarProducto", locale)");            
@@ -147,6 +168,8 @@ private Locale locale;
 					System.out.println("("compra", locale)");
 					System.out.println(list.get(in-1).getName()); 
 				}
+					System.out.println("("precioNegativo", locale)");
+					cuenta= cuenta-10;
 				break;
 			case 5:
 				close=true;
