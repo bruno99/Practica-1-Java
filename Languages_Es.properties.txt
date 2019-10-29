@@ -1,0 +1,33 @@
+user = Nombre de usuario
+password = Contraseña
+ufalse = No existe
+utrue = Bienvenido
+
+option = Elegir una opción:
+option1 =  Nuevo producto
+option2 =  Buscar producto
+option3 =  Ver lista de productos
+option4 =  Comprar producto
+option5 = Cerrar
+
+productoLista = ¿Existe tu producto? (Si=0/No=1)
+productoListaSi = ¿Cual es? (Escribe el numero)
+nuevoProducto = Nuevo producto
+nombre = Nombre
+autor = Autor
+ano = Año
+editorial = Editorial
+precioPositivo = Se han restado 10$ a su cuenta. Gracias por la venta
+
+buscarProducto = Buscar un producto
+buscando = ¿Qué producto quieres buscar?
+precioNegativo = Se han añadido 10$ a su cuenta. Gracias por compra
+
+listaProdctos = Imprimiendo lista de productos
+
+sacarProducto= Sacar producto (Si está disponible)
+sacando = ¿Qué producto quieres sacar? (Escribe el numero)
+disponibilidad = No disponible
+compra = Gracias por su compra
+
+fallo = Solo numeros del 1 al 5
