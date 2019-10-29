@@ -78,6 +78,9 @@ private Locale locale;
 			int cuenta = 0;
 			}
 		}
+		//Una vez se verifica el usuario, su bool de premium nos dirá si a la cuenta se le resta un 10%
+		//Si no es premium se le ofrecerá la opción de pagar 20$ anuales (buscar funcion calendar para que cuente el tiempo
+		//y hacer false el bool una vez transcurra el año de premium) añadidos a la cuenta final
 		if (cuenta !=0){
 		System.out.ptinyln("("ufalse", locale)");
 			System.exit(0);
@@ -99,7 +102,7 @@ private Locale locale;
 			option = sn.nextInt();
 
 			switch(option){
-			case 1:
+			case 1: //Preguntar que tipo de producto y subdividir en categorías
 				Scanner keyboard = new Scanner(System.in);
 				System.out.println("("productoLista", locale)");
 				for (int i=0; i < list.size(); i++)
@@ -134,7 +137,7 @@ private Locale locale;
 					cuenta = cuenta-10;
 					
 				break;
-			case 2:
+			case 2://Preguntar que tipo de producto y subdividir en categorías
 				System.out.println("("buscarProducto", locale)");            
 				Scanner keyboard2 = new Scanner(System.in);                          
 				int in;
@@ -145,14 +148,14 @@ private Locale locale;
 				System.out.println(list.get(in-1).getData());
 
 				break;
-			case 3:
+			case 3://Preguntar que tipo de producto y subdividir en categorías para imprimir listas
 				System.out.println("("listaProductos", locale)");
 
 				for (int i=0; i < list.size(); i++)
 					System.out.println(list.get(i).getData());
 
 				break;
-			case 4:              	
+			case 4:   //Preguntar que tipo de producto y subdividir en categorías 	
 				System.out.println("("sacarProducto", locale)");
 				System.out.println("("sacando", locale)\n");
 				for (int i=0; i < list.size(); i++)
