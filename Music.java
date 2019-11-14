@@ -26,7 +26,7 @@ public String getLenght() {
 public String getGenre() {
 	 return this.genre;
 	 }
-	 public String getMoData() {
+	 public String getMuData() {
 return "Name: " + this.name + "\t" +
 "Author: " + this.author + "\t" +
 "Year: " + this.year + "\t" +
