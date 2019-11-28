@@ -1,3 +1,6 @@
+
+package practica1;
+
 public class Genericos<T> {
 private T valor;
 
