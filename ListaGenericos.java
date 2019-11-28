@@ -1,3 +1,5 @@
+package practica1;
+
 public class ListaGenericos <T extends Generico<T>>{
 private <T> vector;
 
