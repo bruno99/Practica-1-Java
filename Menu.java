@@ -442,9 +442,10 @@ public class Menu {
 						}else {
 							System.out.println(messages.getString("disponibilidad"));
 
-
+                                                        vector.add(list.get(in-1).getDataB);//AQUI METEMOS LA COMPRA A LA LISTA GENERICA QUE SERIA LA CUENTA
 
 						}
+							
 						break;
 					case 6: //Movie
 
@@ -482,6 +483,7 @@ public class Menu {
 
 
 						}
+				         vector.add(list2.get(in-1).getDataMo);//AQUI METEMOS LA COMPRA A LA LISTA GENERICA QUE SERIA LA CUENTA
 						break;
 					case 7: //Music
 						System.out.println(messages.getString("productoLista"));
@@ -518,6 +520,7 @@ public class Menu {
 
 
 						}
+						vector.add(list3.get(in-1).getDataMu);//AQUI METEMOS LA COMPRA A LA LISTA GENERICA QUE SERIA LA CUENTA
 						break;
 						}
 
@@ -533,6 +536,11 @@ public class Menu {
 						break;
 
 					case 4:  
+						
+
+						System.out.println("su cuenta es " ListG());	//IMPRIMO LA CUENTA DE GENERICOS
+							
+							
 						close=true;
 
 						break;
