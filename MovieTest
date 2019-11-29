@@ -1,0 +1,17 @@
+package practica1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MovieTest {
+Movie movie8 = new Movie("Star wars",
+            "X",
+            "X",
+            "X");
+@Test
+void test_editorial() {
+assertEquals("Star wars",movie8.getName());
+}
+
+}
