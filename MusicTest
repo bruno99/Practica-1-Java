@@ -1,0 +1,17 @@
+package practica1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MusicTest {
+Music music8 = new Music("In the end",
+            "Linkin Park",
+            "X",
+            "X");
+@Test
+void test_editorial() {
+assertEquals("Linkin Park",music8.getAuthor());
+}
+
+}
