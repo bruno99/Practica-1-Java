@@ -541,7 +541,9 @@ public class Menu {
 						System.out.println("su cuenta es " ListG());	//IMPRIMO LA CUENTA DE GENERICOS
 						
 						System.out.println("Su lotería de Navidad de regalo es " loteria.getData(); //LA LOTERIA ES EL ARRAY MULTIDIMENSIONAL	
-							
+						
+						System.out.println("El resultado de la loteria es " loteria.getGanadora(); //TE DICE SI HAS GANADO LA LOTERIA	   
+								   
 						close=true;
 
 						break;
