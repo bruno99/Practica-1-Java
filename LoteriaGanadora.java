@@ -20,7 +20,7 @@ public int getData(){
 
 } 
 
-public String getGanador(){
+public int getGanadora(){
 if(loteria.equals(loteriaGanadora)){
   System.out.println("HAS GANADO 100$");
   cuenta= cuenta-100;  
