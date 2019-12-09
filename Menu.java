@@ -121,7 +121,7 @@ public class Menu {
 
 		//Aqui metes tu usuario (existe o no)
 
-		System.out.println("1-Español \n 2-English ");
+		System.out.println("1-Español \n 2-English \n 3- 日本人 ");
 
 
 		ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle");
@@ -538,11 +538,19 @@ public class Menu {
 					case 4:  
 						
 
-						System.out.println("su cuenta es " ListG());	//IMPRIMO LA CUENTA DE GENERICOS
+						System.out.println(messages.getString("cuenta") ListG());	//IMPRIMO LA CUENTA DE GENERICOS
 						
-						System.out.println("Su lotería de Navidad de regalo es " loteria.getData(); //LA LOTERIA ES EL ARRAY MULTIDIMENSIONAL	
+						System.out.println(messages.getString("loteria") loteria.getData(); //LA LOTERIA ES EL ARRAY MULTIDIMENSIONAL	
 						
-						System.out.println("El resultado de la loteria es " loteria.getGanadora(); //TE DICE SI HAS GANADO LA LOTERIA	   
+						System.out.println(messages.getString("loteriaresultado") loteria.getGanadora(); //TE DICE SI HAS GANADO LA LOTERIA	
+			                        //AQUI EL USUARIO PUEDE BUSCAR UN NOMBRE Y SE LE DEVOLVERA EL AUTOR
+							String namebusqueda;
+					System.out.println(messages.getString("busqueda");
+            
+					Scanner busqueda = new Scanner(System.in);
+							System.out.println(messages.getString("busquedaresult")namebusqueda.existe() ;   
+					   
+								   
 								   
 						close=true;
 
@@ -551,6 +559,7 @@ public class Menu {
 
 
 
+								   
 
 
 					default:
