@@ -1,6 +1,6 @@
 package practica 1;
 
-public class Cuenta {
+public class Banco {
  private double saldo;
  public Cuenta(double saldo) {
  this.saldo = saldo;
