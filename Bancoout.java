@@ -1,6 +1,6 @@
 package practica1;
 
-public class Retiro extends Cuenta {
+public class Bancoout extends Cuenta {
  private Cuenta cuenta;
  private int transacciones;
  private double importe;
