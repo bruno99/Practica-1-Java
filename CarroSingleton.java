@@ -23,5 +23,6 @@ public class CarroSingleton {
  for (String p : this.productos)
  productos = productos + p + "\n";
  return productos;
+  
  }
 }
