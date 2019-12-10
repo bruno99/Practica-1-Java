@@ -551,7 +551,18 @@ public class Menu {
 							System.out.println(messages.getString("busquedaresult")namebusqueda.existe() ;   
 					   
 								   
-								   
+Thread[] procesos = new Thread[4];              //PROBANDO LA CONCURRENCIA
+ procesos[0] = new Deposito(cuenta, 5, 10.0);
+ procesos[1] = new Retiro(cuenta, 5, 10.0);
+ procesos[2] = new Deposito(cuenta, 5, 10.0);
+ procesos[3] = new Retiro(cuenta, 5, 10.0);
+ for(int i = 0; i < procesos.length; i++) {
+ procesos[i].start();
+ }
+
+ System.out.println("el saldo final " + cuenta.getSaldo() + " eur.");
+ 
+		   
 						close=true;
 
 						break;
