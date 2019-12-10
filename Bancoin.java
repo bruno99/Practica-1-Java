@@ -1,7 +1,7 @@
 package practica1;
 
 
-public class Deposito extends Cuenta {
+public class Bancoin extends Cuenta {
  private Cuenta cuenta;
  private int transacciones;
  private double importe;
