@@ -17,7 +17,7 @@ int menor;
         }
     }
     for(int i=1; i<this.vector.length; i++){
-System.out.println(this.vector[i].getValor());
+System.out.println(this.vector[i].getData());
 }
 }
 }
