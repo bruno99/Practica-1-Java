@@ -11,12 +11,14 @@ public class Internalization {
     private static Locale locale;
     static Locale esLocale = new Locale("es", "ES");
     static Locale enLocale = new Locale("en", "US");
+	static Locale enLocale = new Locale("jp", "JP");
+	
    
 
     
     public static Locale setLocale() {
     	
-    	System.out.println(" 1. English.\n 2. Español");
+    	System.out.println(" 1. English.\n 2. Español \N 3. Japonés");
     	int option = sn.nextInt();
     	switch(option) {
     		case 1:
@@ -25,6 +27,8 @@ public class Internalization {
     		case 2:
     			locale = Internalization.esLocale;
     			break;
+		case 3:
+			locale = Internalization.jpLocale;
   
     		default:
     			locale = Internalization.esLocale;
